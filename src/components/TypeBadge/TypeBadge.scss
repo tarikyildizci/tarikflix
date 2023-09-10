@@ -1,0 +1,27 @@
+@use 'src/styles/variables.scss' as v;
+@use 'src/styles/util.scss';
+
+.badge {
+  @extend %font-xs;
+  @extend %semibold;
+  width: fit-content;
+  padding: 0.25rem 0.75rem;
+  border-radius: v.$border-radius-full;
+  border: 1px solid;
+
+  &.movie {
+    background-color: v.$blue-dark;
+    border-color: v.$blue-light;
+    color: v.$blue-light;
+  }
+  &.series {
+    background-color: v.$green-dark;
+    border-color: v.$green-light;
+    color: v.$green-light;
+  }
+  &.game {
+    background-color: v.$purple-dark;
+    border-color: v.$purple-light;
+    color: v.$purple-light;
+  }
+}

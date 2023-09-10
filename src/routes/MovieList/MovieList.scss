@@ -1,0 +1,14 @@
+.movie-list {
+  padding: 1rem 15%;
+}
+
+.data-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.empty-error-state {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: center;
+}

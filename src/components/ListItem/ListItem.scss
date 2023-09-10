@@ -1,0 +1,95 @@
+@use 'src/styles/variables.scss' as v;
+@use 'src/styles/util.scss';
+
+.list-item {
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+  border-bottom: 1px solid v.$border;
+
+  img {
+    object-fit: cover;
+    border-radius: v.$border-radius-sm;
+  }
+
+  .info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: v.$gap-16;
+    width: 100%;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    a {
+      @extend %font-3xl;
+
+      @media (max-width: v.$small) {
+        font-size: v.$font-size-xl;
+        line-height: v.$line-height-xl;
+      }
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .imdb-id {
+      color: v.$color-muted;
+
+      @media (max-width: v.$small) {
+        font-size: v.$font-size-xs;
+        line-height: v.$line-height-xs;
+      }
+    }
+  }
+
+  .year {
+    display: flex;
+    align-items: center;
+    gap: v.$gap-8;
+  }
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.img-skeleton {
+  height: 150px;
+  width: 100px;
+}
+
+.skeleton-box {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+  background-color: v.$slate-400;
+  border-radius: v.$border-radius-sm;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateX(-100%);
+    background-image: linear-gradient(
+      90deg,
+      rgba(v.$slate-300, 0) 0,
+      rgba(v.$slate-300, 0.2) 20%,
+      rgba(v.$slate-300, 0.5) 60%,
+      rgba(v.$slate-300, 0)
+    );
+    animation: shimmer 1s infinite;
+    content: '';
+  }
+
+  @keyframes shimmer {
+    100% {
+      transform: translateX(100%);
+    }
+  }
+}

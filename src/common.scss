@@ -1,0 +1,56 @@
+@use 'src/styles/variables.scss' as v;
+@use 'src/styles/util.scss';
+
+body {
+  @extend %font-md;
+  @extend %normal;
+  background-color: v.$background;
+  color: v.$color;
+}
+
+main {
+  min-height: 100vh;
+  //   padding: 3rem 15%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+input,
+select,
+button {
+  outline: none;
+  background-color: v.$background-lifted;
+  color: v.$color;
+  border: 1px solid v.$border;
+  border-radius: v.$border-radius-sm;
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    border-color: v.$border-hover;
+  }
+
+  &:active,
+  &:focus {
+    border-color: v.$border-active;
+  }
+
+  &:disabled {
+    border-color: v.$border;
+    background-color: v.$background;
+    color: v.$color-muted;
+  }
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: v.$gap-8;
+}
+
+label {
+  @extend %medium;
+  color: v.$color-muted;
+}

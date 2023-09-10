@@ -1,0 +1,10 @@
+@use 'src/styles/variables.scss' as v;
+
+.error {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: v.$gap-16;
+}

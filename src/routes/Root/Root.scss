@@ -1,0 +1,11 @@
+@use 'src/styles/variables.scss' as v;
+@use 'src/styles/util.scss';
+
+.topbar {
+  @extend %font-3xl;
+  @extend %semibold;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  background-color: v.$background-lifted;
+}

@@ -1,0 +1,56 @@
+@use 'src/styles/variables.scss' as v;
+
+//**********TYPOGRAPHY**********
+// using placeholder instead of mixins, no arguements, less css
+
+// sizes
+%font-xs {
+  font-size: v.$font-size-xs;
+  line-height: v.$line-height-xs;
+}
+%font-sm {
+  font-size: v.$font-size-sm;
+  line-height: v.$line-height-sm;
+}
+%font-md {
+  font-size: v.$font-size-md;
+  line-height: v.$line-height-md;
+}
+%font-lg {
+  font-size: v.$font-size-lg;
+  line-height: v.$line-height-lg;
+}
+%font-xl {
+  font-size: v.$font-size-xl;
+  line-height: v.$line-height-xl;
+}
+%font-2xl {
+  font-size: v.$font-size-2xl;
+  line-height: v.$line-height-2xl;
+}
+%font-3xl {
+  font-size: v.$font-size-3xl;
+  line-height: v.$line-height-3xl;
+}
+%font-4xl {
+  font-size: v.$font-size-4xl;
+  line-height: v.$line-height-4xl;
+}
+%font-5xl {
+  font-size: v.$font-size-5xl;
+  line-height: v.$line-height-5xl;
+}
+
+// weights
+%normal {
+  font-weight: 400;
+}
+%medium {
+  font-weight: 500;
+}
+%semibold {
+  font-weight: 600;
+}
+%bold {
+  font-weight: 700;
+}
