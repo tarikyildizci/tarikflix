@@ -25,12 +25,12 @@ export const ListPagination: React.FC<ListPaginationProps> = ({
 
   const handlePrevPage = () => {
     changeFilter('page', page ? (page - 1).toString() : undefined)
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.scrollTo({ top: 0 })
   }
 
   const handleNextPage = () => {
     changeFilter('page', page ? (page + 1).toString() : '2')
-    window.scrollTo({ top: 0, behavior: 'instant' })
+    window.scrollTo({ top: 0 })
   }
 
   return (

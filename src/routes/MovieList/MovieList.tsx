@@ -67,7 +67,13 @@ const Content: React.FC<{
   }
 
   if (isLoading) {
-    return SKELETON_ARRAY.map((_, index) => <ListItem key={index} skeleton />)
+    return (
+      <div className="data-list">
+        {SKELETON_ARRAY.map((_, index) => (
+          <ListItem key={index} skeleton />
+        ))}
+      </div>
+    )
   }
 
   if (isError) {
