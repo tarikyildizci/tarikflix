@@ -74,6 +74,10 @@ const useFilters = () => {
         prevSearchParams.set(key, newValue)
       } else if (prevSearchParams.has(key)) {
         //removed
+        if (key !== 'page') {
+          // if filters deleted, reset page
+          prevSearchParams.delete('page')
+        }
         prevSearchParams.delete(key)
       }
 

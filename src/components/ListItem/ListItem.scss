@@ -22,15 +22,20 @@
     .header {
       display: flex;
       justify-content: space-between;
+      @media (max-width: v.$small) {
+        flex-direction: column;
+      }
     }
 
     a {
       @extend %font-3xl;
 
       @media (max-width: v.$small) {
+        // I am new to scss, just found out I can't use extend under media queries :/
         font-size: v.$font-size-xl;
         line-height: v.$line-height-xl;
       }
+
       &:hover {
         text-decoration: underline;
       }
